@@ -19,13 +19,13 @@ def downloadPics(url):
     html = HtmlResponse(url=url,body=body)
     pics = html.selector.xpath('//*[@class="gallary_item"]/div/div/table/tr/td/img/@src').extract()
     ahead = "http://www.xiumm.org"
-    pics =[ahead + x for x in pics]
+    pics = [ahead + x for x in pics]
     return pics
 
 def urlList(url):
 
     body = getHtml(url)
-    html = HtmlResponse(url=url,body=body)
+    html = HtmlResponse(url=url, body=body)
     urls = html.selector.xpath('//*[@class="gallary_wrap"]/div/div[1]/div[1]/table/tr/td/a/@href').extract()
     ahead = "http://www.xiumm.org"
     urls = [ahead + x for x in urls]

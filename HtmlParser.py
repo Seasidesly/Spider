@@ -46,7 +46,7 @@ class HtmlParser(object):
 			img_urls.add(img_url)
 
 			alt = img_node["alt"]
-			print("alt" + alt)
+			print("alt:" + alt)
 			alts.add(alt)
 
 		return img_urls
